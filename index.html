@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+  <div id="main-container">
+    <section id="player-section">
+
+      <div>
+        <img src="https://m.media-amazon.com/images/I/81mNRm3F6KL._SS500_.jpg" id="render-left-thumbnail">
+      </div>
+
+
+      <audio id="audio-player">
+        <source id="audio-source" src="https://edyoda.s3.ap-south-1.amazonaws.com/public/musicfiles/without-you.mp3" type="audio/mp3">
+      </audio>
+    
+      <!-- buttons to manage music -->
+      <div>
+      <div id="progress-wrapper">
+          <div id="progress-bar"></div>
+        </div>
+    
+        
+      </div>
+
+      <div style="display: flex; justify-content: center; ">
+        <button id="btn-backward" style="margin: 2px;"><i class="fas fa-backward"></i></button>
+      <button id="btn-play" style="margin: 2px;"><i class="fas fa-play-circle"></i></button>
+      <button id="btn-pause" style="margin: 2px;"><i class="fas fa-pause-circle"></i></button>
+      <button id="btn-forward" style="margin: 2px;"><i class="fas fa-forward"></i></button>
+      </div>
+      
+
+      <!-- title and artist -->
+      <h2 id="audio-track-title"></h2>
+      <p id="audio-track-artist"></p>
+      
+    
+    
+      <!-- Adding speed feature to our audio player -->
+      <div>
+        <button id="btn-playbackrate-0.25">0.25x</button>
+      <button id="btn-playbackrate-0.5">0.5x</button>
+      <button id="btn-playbackrate-1">1x</button>
+      <button id="btn-playbackrate-1.5">1.5x</button>
+      <button id="btn-playbackrate-2">2x</button>
+      </div>
+    
+      <!-- Adding sounds to our audio player -->
+      <div>
+        <button id="btn-vol-inc"><i class="fas fa-volume-up"></i></button>
+        <span id="player-vol">10%</span>
+        <button id="btn-vol-dec"><i class="fas fa-volume-down"></i></button>
+      </div>
+    </section>
+
+    <!-- PlayList -->
+    <section id="playlist-section">
+    
+    </section>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
